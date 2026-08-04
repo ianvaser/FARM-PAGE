@@ -81,3 +81,46 @@
   transition: color 0.3s ease;
   border:#106b09 0.5px solid;
 }
+
+.ProductCard{
+  background-color: aliceblue;
+  border-radius: 30px;
+  display: flex;
+  color:black;
+  border:black 1px solid;
+  width: 25rem;
+}
+
+.ProductCard-imagen{
+  max-width: 8.5rem;
+  max-height: fit-content;
+  margin: 0.5rem; 
+  border-right:#04040437 0.5px solid;
+}
+
+.ProductCard-datos{
+  display: block;
+  width: 100%;
+}
+
+.ProductCard-datos-precio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.ProductCard-btn{
+  background-color: #1aa311;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 0.6rem;
+  text-decoration: none;
+}
+
+ProductCard-btn:hover {
+  background-color: #010800;
+}
