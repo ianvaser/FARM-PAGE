@@ -8,8 +8,15 @@ function App() {
     <div className="App">
       <SegundoComponente/>
       <header className="App-header">
-        <ProductCard/>
+        <img src={logo} className="ventana-anuncio" alt="logo" />
+        <div className='contenedor-productos'>
+          <h2>Productos mas vendidos</h2>
+          <ProductCard/>
+        </div>      
       </header>
+      <footer className="App-footer">
+        <p>Todos los derechos reservados</p>
+      </footer>
     </div>
   );
 }

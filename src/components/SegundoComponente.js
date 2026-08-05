@@ -11,6 +11,12 @@ export const SegundoComponente = () => {
                 <li className="nav-item">
                 <a className="nav-link " aria-current="page" href="#">Sobre nosotros</a>
                 </li>
+                <li className="nav-item">
+                <a className="nav-link " aria-current="page" href="#">Prodctos</a>
+                </li>
+                <li className="nav-item">
+                <a className="nav-link " aria-current="page" href="#">Contacto</a>
+                </li>
             </ul>
     </div>
   )
