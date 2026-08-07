@@ -1,51 +1,9 @@
+
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
-.ventana-anuncio {
-  height: 40vmin;
-  pointer-events: none;
-  background-color: #bbbdbe;
-  border:solid 1px black;
-  width: 80%;
-}
-
-
-
-.App-header {
-  background-color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.contenedor-productos{
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  margin-top: 2rem;
-  margin-left: 1rem;
-  width: 100%;
-  color: black;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-
-
-.rojo {
-  color: red;
-}
-
-.verde {
-  color: green;
-}
 
 .navbar {
   background-color: #1aa311;
@@ -54,8 +12,9 @@
   flex-direction: row;
   color: #ffffff;
   top: 0;
-  width: 97.9%;
+  width: 100%;
   max-height: 60px;
+  overflow: hidden;
 }
 
 .navbar-nav {
@@ -88,49 +47,6 @@
   background-color: #106b09;
 }
 
-.ProductCard{
-  background-color: aliceblue;
-  border-radius: 30px;
-  display: flex;
-  color:black;
-  border:black 1px solid;
-  width: 25rem;
-}
-
-.ProductCard-imagen{
-  max-width: 8.5rem;
-  max-height: fit-content;
-  margin: 0.5rem; 
-  border-right:#04040437 0.5px solid;
-}
-
-.ProductCard-datos{
-  display: block;
-  width: 100%;
-}
-
-.ProductCard-datos-precio{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-
-.ProductCard-btn{
-  background-color: #1aa311;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-right: 0.6rem;
-  text-decoration: none;
-}
-
-.ProductCard-btn:hover {
-  background-color: #010800;
-}
-
 
 .App-footer{
   background-color: #1aa311;
@@ -139,5 +55,13 @@
   flex-direction: row;
   color: #ffffff;
   bottom: 0;
-  width: 97.9%;
+  width: 100%;
+  justify-content:first baseline
+}
+
+.footer-direccion{
+  margin-left: 5rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #ffffff;
 }

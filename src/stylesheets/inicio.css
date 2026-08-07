@@ -1,0 +1,120 @@
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.ventana-anuncio {
+  height: 40vmin;
+  pointer-events: none;
+  background-color: #bbbdbe;
+  border:solid 1px black;
+  width: 50%;
+}
+
+.contenedor-productos{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 100%;
+  color: black;
+}
+
+.tachado {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.descuento {
+  color: green;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.no-existe {
+  display: none;
+}
+
+.ProductList{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  max-height: 10rem;
+
+}
+
+.contenedor-productos-lista{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 7.5%;
+  align-items: center;
+  width: 85%;
+  gap: 1rem;
+  height: 10rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+.contenedor-productos-lista::-webkit-scrollbar {
+height: 8px;
+}
+.contenedor-productos-lista::-webkit-scrollbar-thumb {
+background: #106b09;
+border-radius: 4px;
+}
+
+.ProductCard{
+  background-color: aliceblue;
+  border-radius: 30px;
+  display: flex;
+  color:black;
+  border:black 2px solid;
+  width: 25rem;
+  overflow: hidden;
+}
+
+.ProductCard-imagen{
+  max-width: 8rem;
+  max-height: 100%;
+  margin-right: 1rem;
+  border-right:#04040437 0.5px solid;
+}
+
+.ProductCard-datos{
+  display: block;
+  width: 100%;
+}
+
+.ProductCard-datos-precio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 0.2rem
+}
+
+.ProductCard-btn{
+  background-color: #1aa311;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 0.6rem;
+  text-decoration: none;
+}
+
+.ProductCard-btn:hover {
+  background-color: #010800;
+}
