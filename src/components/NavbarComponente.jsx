@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const SegundoComponente = () => {
+export const NavbarComponente = () => {
   return (
-    <div className="navbar bg-primary navbar-expand-lg bg-body-tertiary">
+    <div className="navbar-container bg-primary navbar-expand-lg bg-body-tertiary">
             <h4 className="navbar-brand">Farmacia Del Plata</h4>
             <ul className="navbar-nav ">
                 <li className="nav-item">
@@ -18,6 +18,12 @@ export const SegundoComponente = () => {
                 <a className="nav-link " aria-current="page" href="contacto">Contacto</a>
                 </li>
             </ul>
+            <div className="d-flex">
+              <li className="nav-inicio-sesion">
+                  <a className="nav-link-inicio-sesion" href="iniciar-sesion">Iniciar sesión</a>
+              </li>
+            </div>
+            <img src="../assets/carrito-de-compras.png" alt="carrito" width={20} />
     </div>
   )
 }

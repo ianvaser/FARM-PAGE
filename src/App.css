@@ -5,7 +5,7 @@
 }
 
 
-.navbar {
+.navbar-container {
   background-color: #1aa311;
   padding: 1rem;
   display: flex;
@@ -47,6 +47,26 @@
   background-color: #106b09;
 }
 
+.nav-link-inicio-sesion {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  
+}
+
+.nav-inicio-sesion {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  border-radius: 10px;
+}
+.nav-inicio-sesion:hover{
+  background-color: #106b09;
+}
 
 .App-footer{
   background-color: #1aa311;
@@ -64,4 +84,10 @@
   margin-top: 0.5rem;
   font-size: 0.8rem;
   color: #ffffff;
+}
+
+.d-flex{
+  list-style-type: none;
+  margin-left: 0.5rem;
+  margin-right: 0rem;
 }
