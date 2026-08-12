@@ -1,9 +1,11 @@
 .inicio-sesion{
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    max-height: 10%;
 }
 .inicio-sesion-container{
-    height: 20rem;
+    height: 10%;
     align-items: center;
     justify-content: center;
     border: solid 1px black;
@@ -45,4 +47,13 @@
     margin-top: 1rem;
     margin-right: 1rem;
     font-size: 1rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
 }
