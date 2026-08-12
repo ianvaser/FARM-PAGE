@@ -1,3 +1,4 @@
+import InicioSesion from '../pages/inicio-sesion';
 import '../stylesheets/inicio-sesion.css';
 import {useState} from 'react';
 
@@ -9,7 +10,48 @@ export const InicioSesionForm = () => {
         e.preventDefault();
         // Handle form submission logic here
     };
+    const InicioSesion = () =>{
+        const data = {
+            email: email,
+            password:password
+        };
+    if(!email || !password){
+        alert("Por favor complete todos los campos");
+        return;
+    }
+    if(!email.includes("@")){
+        alert("Por favor ingrese un email válido");
+        return;
+    }
+    
+    fetch("http://localhost:3001/login/inicio-sesion", {
+    method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+    })
+    .then(async response => {
+        const data = await response.json();
 
+        if (!response.ok) {
+
+            throw new Error(data.errorMessage);
+
+        }
+
+        alert("Login correcto");
+
+        window.location.href = "/inicio";})
+
+    .catch(error => {
+
+    console.error(error);
+
+    alert("usuario o contraseña incorrectos");
+
+    });
+    }
     const registro = () =>{
         const data = {
             email: email,
@@ -27,7 +69,7 @@ export const InicioSesionForm = () => {
         alert("La contraseña debe tener al menos 6 caracteres");
         return;
     }
-    fetch("http://localhost:3001/login/inicio-sesion", {
+    fetch("http://localhost:3001/login/registro", {
     method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -40,6 +82,8 @@ export const InicioSesionForm = () => {
     console.log(data);
 
     alert("Usuario registrado con éxito");
+
+    window.location.href = "/inicio";
 
     })
 
@@ -76,7 +120,7 @@ export const InicioSesionForm = () => {
                 required 
             />
             <br />
-            <button className='form-button' type="submit">Iniciar sesión</button>
+            <button className='form-button' type="submit" onClick={e => InicioSesion()}>Iniciar sesión</button>
             <button className='form-button' type="button" onClick={e => registro()}>Registrarse</button>
         </form>
     );
