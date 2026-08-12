@@ -3,8 +3,8 @@ import React,{useState} from "react";
 
 export const PrimerComponente = () =>{
   const [nombre, setNombre] = useState("Juan");
-     const cambiarNombre = (nuevoNombre) => {
-        setNombre(nuevoNombre);
+  const cambiarNombre = (nuevoNombre) => {
+       setNombre(nuevoNombre);
     }
   
 
