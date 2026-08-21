@@ -7,6 +7,7 @@ import Home from './pages/inicio';
 import Products from './pages/productos';
 import Contact from './pages/contacto';
 import InicioSesion from './pages/inicio-sesion';
+import Carrito from './pages/carrito';
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/productos" element={<Products />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/iniciar-sesion" element={<InicioSesion />} />
+        <Route path="/carrito" element={<Carrito />} />
       </Routes>
       <footer className="App-footer">
         <p>Todos los derechos reservados</p>

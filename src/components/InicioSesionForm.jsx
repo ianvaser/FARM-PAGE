@@ -63,14 +63,13 @@ const loginGoogle = async () => {
            const user = result.user;
            console.log(user);
            const token = await user.getIdToken();
-           await fetch("http://localhost:3001/login/google", {
+           const idUsuario = user.uid;
+           await fetch(`http://localhost:3001/login/google/${idUsuario}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({
-                    token
-                })
+                body: JSON.stringify({})
             });
         } 
     catch (error) {

@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState} from 'react';
 
 export const NavbarComponente = () => {
   return (
@@ -23,7 +24,11 @@ export const NavbarComponente = () => {
                   <a className="nav-link-inicio-sesion" href="iniciar-sesion">Iniciar sesión</a>
               </li>
             </div>
-            <img src="../assets/carrito-de-compras.png" alt="carrito" width={20} />
+            <div className="carrito" onClick={e=>window.location.href = "/carrito"}>
+              <button className='carrito-button' href='carrito'>
+                <img className="carrito-imagen" src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="carrito"/>
+              </button>
+            </div>
     </div>
   )
 }

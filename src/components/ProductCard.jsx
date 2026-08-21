@@ -2,7 +2,26 @@ import React, {useEffect , useState} from "react";
 
 
 
-export const ProductCard = ({nombre,precio,imagen,descuento}) => {
+export const ProductCard = ({id,nombre,precio,imagen,descuento}) => {
+    var precioConDescuento = (precio - (precio * ((100-descuento) / 100))).toFixed(2);
+    if(!descuento){
+        precioConDescuento = precio;
+    }
+    const agregarACarrito = async()=>{
+        
+        console.log("precio final:", precioConDescuento);
+        await fetch(`http://localhost:3001/compras/${id}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nombre,
+                    precioConDescuento
+                })
+            });
+    }
+    
     return(
         
         <div className="ProductCard">
@@ -11,8 +30,8 @@ export const ProductCard = ({nombre,precio,imagen,descuento}) => {
                 <a><strong>{nombre}</strong></a>
                 <div className="ProductCard-datos-precio">
                     <a className={descuento>0 ? 'tachado' : 'normal'}>${precio}</a>
-                    <a className={descuento>0 ? 'descuento' : 'no-existe'}>${(precio - (precio * ((100-descuento) / 100))).toFixed(2)}</a>
-                    <button className="ProductCard-btn">Comprar</button>
+                    <a className={descuento>0 ? 'descuento' : 'no-existe'}>${precioConDescuento}</a>
+                    <button className="ProductCard-btn" onClick={e=>agregarACarrito()}>Comprar</button>
                 </div>
             </div>
         </div>
@@ -47,6 +66,7 @@ export const ProductList = ()=> {
             {products.map((product) => (
                 <ProductCard
                     key={product.id}
+                    id = {product.id}
                     nombre={product.nombre}
                     precio={product.precio}
                     imagen={product.imagen}
