@@ -1,9 +1,10 @@
+import { ComprasResumen} from "../components/ComprasCardTemp.jsx";
+
+
 export default function Carrito() {
   return (
-    <div style={{ padding: '20px' }}>
-      
-      <button >Cancelar compra</button>
-      <button>comprar</button>
+    <div className="contenedor-carrito" style={{ padding: '20px' }}>
+      <ComprasResumen />
     </div>
   );
 }

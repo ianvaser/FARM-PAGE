@@ -8,19 +8,34 @@ export const ProductCard = ({id,nombre,precio,imagen,descuento}) => {
         precioConDescuento = precio;
     }
     const agregarACarrito = async()=>{
-        
-        console.log("precio final:", precioConDescuento);
-        await fetch(`http://localhost:3001/compras/${id}`, {
+    const cantidad = 1;    
+    try{
+        const response = await fetch(`http://localhost:3001/compras/${id}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
+                    id,
                     nombre,
-                    precioConDescuento
+                    precioConDescuento,
+                    imagen,
+                    precio,
+                    cantidad
                 })
             });
+        if(!response.ok){
+            const data = await response.json();
+            alert(data.message);
+            throw new Error(data.message);
+        }else{
+            alert("producto anadido al carrito exitosamente");    
+        }
+        
+    }catch(error){
+        console.error(error);
     }
+}
     
     return(
         
@@ -29,9 +44,11 @@ export const ProductCard = ({id,nombre,precio,imagen,descuento}) => {
             <div className="ProductCard-datos">
                 <a><strong>{nombre}</strong></a>
                 <div className="ProductCard-datos-precio">
-                    <a className={descuento>0 ? 'tachado' : 'normal'}>${precio}</a>
-                    <a className={descuento>0 ? 'descuento' : 'no-existe'}>${precioConDescuento}</a>
-                    <button className="ProductCard-btn" onClick={e=>agregarACarrito()}>Comprar</button>
+                    <div className="precio-container">
+                        <a className={descuento>0 ? 'tachado' : 'normal'}>${precio}</a>
+                        <a className={descuento>0 ? 'descuento' : 'no-existe'}>${precioConDescuento}</a>
+                    </div>
+                    <button className="ProductCard-btn" onClick={e=>agregarACarrito()}>Agregar a carrito</button>
                 </div>
             </div>
         </div>
@@ -49,9 +66,11 @@ export const ProductList = ()=> {
             const response = await fetch(
                 "http://localhost:3001/api/products"
             );
-
+            
             const data = await response.json();
-
+            if(!response.ok){
+                throw new Error(data.message); 
+            }
             setProducts(data);
             } catch (error) {
                 console.error(error);

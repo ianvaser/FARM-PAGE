@@ -1,0 +1,54 @@
+.oculta{
+    display: none;
+}
+.compras-container{
+    display: flex;
+}
+
+.compras-list{
+    display: flex;
+    flex-direction: column;
+
+}
+.comprasCard{
+    display: block;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    max-height:fit-content ;
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-right: 1rem;
+}
+
+.contenedor-carrito{
+    justify-items: center;
+    
+}
+
+.flexBox-compras{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.data-compras{
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+}
+.botones-compras{
+    margin: 0.5rem;
+    display: flex;
+    justify-content:space-around;
+}
+
+.button-pencil{
+    background-color: white;
+    border: none;
+    width: 25%;
+}
+
+.button-pencil:hover{
+    cursor: pointer;
+    background-color: rgb(116, 117, 116);
+}

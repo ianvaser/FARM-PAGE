@@ -3,7 +3,9 @@
   text-align: center;
   overflow: hidden;
 }
-
+.navbar-brand{
+  min-width: fit-content;
+}
 
 .navbar-container {
   background-color: #1aa311;
@@ -55,7 +57,6 @@
   
 }
 .d-flex{
-  margin-left: 0.5rem;
   margin-right: 1.5rem;
   
 }
@@ -81,11 +82,12 @@
 
 .carrito-button{
   background-color: #ffffff00;
-  border: #106b09 0.5px solid;
+  border: none;
   cursor: pointer;
   padding: auto;
   height: max-content;
-  border-radius: 30%;
+  border-radius: 20%;
+  background-color: white;
 }
 .carrito-button:hover{
   background-color: #106b09;

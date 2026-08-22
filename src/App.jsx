@@ -1,13 +1,11 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {PrimerComponente} from './components/PrimerComponente';
 import {NavbarComponente} from './components/NavbarComponente';
-import { ProductList } from './components/ProductCard';
 import Home from './pages/inicio';
 import Products from './pages/productos';
-import Contact from './pages/contacto';
 import InicioSesion from './pages/inicio-sesion';
 import Carrito from './pages/carrito';
+import AboutUs from './pages/sobreNosotros';
 function App() {
   return (
     <BrowserRouter>
@@ -18,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/inicio" element={<Home />} />
         <Route path="/productos" element={<Products />} />
-        <Route path="/contacto" element={<Contact />} />
+        <Route path="/sobre-nosotros" element={<AboutUs />} />
         <Route path="/iniciar-sesion" element={<InicioSesion />} />
         <Route path="/carrito" element={<Carrito />} />
       </Routes>

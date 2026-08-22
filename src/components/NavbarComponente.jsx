@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from 'react';
+import "../App.css"
 
 export const NavbarComponente = () => {
   return (
@@ -14,9 +15,6 @@ export const NavbarComponente = () => {
                 </li>
                 <li className="nav-item">
                 <a className="nav-link " aria-current="page" href="productos">Productos</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="contacto">Contacto</a>
                 </li>
             </ul>
             <div className="d-flex">

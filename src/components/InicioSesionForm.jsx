@@ -71,6 +71,7 @@ const loginGoogle = async () => {
                 },
                 body: JSON.stringify({})
             });
+           window.location.href = "/inicio"
         } 
     catch (error) {
          console.error(error);
@@ -151,9 +152,9 @@ const loginGoogle = async () => {
             />
             </div>
             <br />
-            <button className='form-button' type="submit" onClick={e => InicioSesion()}><FaSignInAlt/>Iniciar sesión</button>
-            <button className='form-button' type="button" onClick={e => loginGoogle()}><FcGoogle size={30} /></button>    
-            <button className='form-button' type="button" onClick={e => Registro()}><FaUserPlus/>Registrarse</button>
+            <button className='form-button' type="submit" onClick={e => InicioSesion()}><FaSignInAlt/> Iniciar sesión</button>
+            <button className='form-button-google' type="button" onClick={e => loginGoogle()}><FcGoogle size={30} /></button>    
+            <button className='form-button' type="button" onClick={e => Registro()}><FaUserPlus/> Crear Nueva Cuenta</button>
         </form>
     );
 }
